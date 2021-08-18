@@ -12,11 +12,15 @@ function getPin() {
 }
 
 function generatePin()
-{    const calc= document.getElementById('typed-numbers');
- calc.value='';
-
+{ 
    const pin= getPin();
 document.getElementById('display-pin').value=pin;
+
+// Clear Other Value 
+const calc= document.getElementById('typed-numbers');
+calc.value='';
+document.getElementById('notify-fail').style.display='none';
+       document.getElementById('notify-success').style.display='none';
 
 }
 
